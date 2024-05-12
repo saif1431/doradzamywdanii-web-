@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(90, 47, 47, 0.597), rgba(24, 13, 13, 0.264)), url('hero-DwD.jpg');
+  background-position: center;
+  background-size: 150%;
+  background-attachment: fixed;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+
+.main-text {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  font-size: 3.5rem;
+  text-align: center;
+  letter-spacing: .2rem;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  overflow: hidden;
+}
+
+.main-text .text2 {
+  color: #B00A0C;
+}
+
+#main nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 22vh;
+  background: linear-gradient(90deg, #F0D2D2, #B00A0C);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+nav .nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: .6vw;
+  list-style: none;
+  font-weight: 200;
+}
+
+nav .nav-items ul li a {
+  position: relative;
+  font-family: railway sans-serif;
+  color: #fffffff7;
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  letter-spacing: .1vw;
+  padding: 0 10px;
+  transition: all ease 1s;
+}
+
+nav .nav-items .active {
+  padding: 2rem 1rem;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+nav .nav-items .active:hover {
+  border-top: 0;
+  border-bottom: 0;
+
+}
+
+nav .nav-items ul li a:hover {
+  padding: 2vw 1vw;
+  border-top: 2px solid #B00A0C;
+  border-bottom: 2px solid #B00A0C;
+  transition: all ease .5s;
+}
+
+.nav-address {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+  padding: 0 1vw;
+}
+
+.icon a {
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.icon i {
+  font-size: 1.4vw;
+  font-weight: 500;
+}
+
+.icon h5 {
+  letter-spacing: .1vw;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+
+}
+
+nav #hamburger {
+  font-size: 2vw;
+  color: #fff;
+  font-weight: 700;
+  display: none;
+}
+
+nav .logo img {
+  width: 30vw;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+@media screen and (width < 900px) {
+  #main nav {
+    height: 10%;
+  }
+
+  #main {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: #B00A0C;
+    font-size: 2rem;
+    gap: 0;
+
+  }
+
+
+  nav ul li {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .nav-address {
+    display: none;
+  }
+
+  nav .logo img {
+    width: 60vw;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  nav #hamburger {
+    display: block;
+    font-size: 4vw;
+  }
+
+  #menuList {
+    transition: all ease .5s;
+  }
+}
+
+/*----------- About Section Swpier JS----------- */
+
+#about {
+  overflow: hidden;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper {
+  width: 97%;
+  height: 30%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 2.7vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #B00A0C;
+  margin-top: 3.6rem;
+  overflow: hidden;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.swiper-button-prev:after {
+  content: 'prev';
+  font-size: .5rem;
+  color: red;
+}
+
+.swiper-button-next:after {
+  content: 'next';
+  font-size: .5rem;
+  color: red;
+}
+
+.swiper-slide h5 {
+  text-align: center;
+  font-size: 1.9rem;
+  background-color: #fff;
+  margin: 0rem 3rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.about-text {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  gap: 4vw;
+}
+
+.aboutText-1 {
+  min-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3vw;
+}
+
+.aboutText-1 h2 {
+  font-weight: 800;
+  font-size: 3vw;
+}
+
+.aboutText-2 h2 {
+  font-weight: 800;
+  font-size: 3vw;
+}
+
+.about-text p {
+  font-size: 1.4vw;
+  font-weight: 400;
+  text-align: center;
+  color: #000;
+  /* background-color: red; */
+  margin-top: 1vw;
+  line-height: 2vw;
+  font-family: "Raleway", sans-serif;
+}
+
+.aboutText-1 img {
+  width: 10vw;
+  height: 10vh;
+}
+
+.aboutText-2 img {
+  width: 10vw;
+  height: 10vh;
+}
+
+.aboutText-2 {
+  min-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3vw;
+}
+
+
+#offers {
+  width: 100%;
+  height: 100%;
+  background-color: #B00A0C;
+  display: flex;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  justify-content: space-between;
+  gap: 2vw;
+  padding: 2vw 5vw;
+  overflow: hidden;
+}
+
+.offer1 {
+  min-width: 40%;
+  height: 50%;
+  background-color: green;
+}
+
+.offer1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.offer2 {
+  min-width: 60%;
+  color: #fff;
+}
+
+.offer2 h1 {
+  font-size: 5vw;
+  font-weight: 800;
+}
+
+.offer2 h5 {
+  margin-top: 2vw;
+  font-size: 2.5vw;
+  font-weight: 200;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+.offer2 button {
+  margin-top: 3vw;
+  padding: .7vw 6vw;
+  font-size: 2.5vw;
+  background-color: #fff;
+  color: #B00A0C;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  transition: all ease 0.5s;
+}
+
+.offer2 button:hover {
+  transform: scale(1.1);
+}
+
+#contactUs {
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(rgba(22, 19, 19, 0.641), rgba(24, 13, 13, 0.557)), url('hero-DwD.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Raleway", sans-serif;
+}
+
+.contact-text h1 {
+  text-align: center;
+  font-size: 9vw;
+  color: #A80D11;
+  /* margin-top: 1vw; */
+}
+
+.contact-text :nth-child(2) {
+  color: #fff;
+}
+
+.comment {
+  width: 70vw;
+  height: 100vh;
+  background-color: #B00A0C;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comma {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5vw;
+}
+
+.comma h2 {
+  color: #B00A0C;
+  font-size: 3.5vw;
+  text-align: center;
+  font-weight: 800;
+  background-color: #fff;
+  height: 5vw;
+  width: 5vw;
+  margin: 0 auto;
+}
+
+.comma h1 {
+  margin-top: 1vw;
+  font-size: 3vw;
+  color: #fff;
+}
+
+.comment .swiper {
+
+  width: 80%;
+  height: 80%;
+}
+
+.comment .swiper-slide {
+  background-color: #B00A0C;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+.swiper-slide p {
+  margin-top: 2vw;
+  text-align: start;
+  font-size: 1.8vw;
+  font-weight: 200;
+}
+
+.swiper-slide span {
+  font-size: 2vw;
+  margin-top: 2vw;
+}
+
+.swiper-slide h6 {
+  text-align: start;
+  font-size: 1.8vw;
+  margin-top: 4vw;
+  font-weight: 700;
+}
+
+footer {
+  overflow: hidden;
+  width: 100%;
+  height: 25%;
+  background-color: #3A3A3A;
+  color: #fff;
+}
+
+footer h3 {
+  padding: 3vw 3vw;
+  font-size: 1.3vw;
+  font-weight: 500;
+}
